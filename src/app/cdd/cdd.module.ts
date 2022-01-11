@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
+import { AppMaterialModule } from './../compartilhado/app-material.module';
 import { CddRoutingModule } from './cdd-routing.module';
 import { ClassesComponent } from './classes/classes.component';
 
@@ -11,7 +12,8 @@ import { ClassesComponent } from './classes/classes.component';
   ],
   imports: [
     CommonModule,
-    CddRoutingModule
+    CddRoutingModule,
+    AppMaterialModule
   ]
 })
 export class CddModule { }

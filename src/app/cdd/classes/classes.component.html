@@ -1,1 +1,56 @@
-<p>classes works!</p>
+<mat-card>
+  <mat-toolbar color="accent">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Menu [CDD]</span>
+    <span class="example-spacer"></span>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <table mat-table [dataSource]="livrosGeneros" class="mat-elevation-z8">
+    <!-- Id do Gênero -->
+    <ng-container matColumnDef="_idGenero">
+      <th mat-header-cell *matHeaderCellDef>Código CDD</th>
+      <td mat-cell *matCellDef="let generos">{{ generos._idGenero }}</td>
+    </ng-container>
+
+    <!-- Nome Gênero -->
+    <ng-container matColumnDef="nomeGenero">
+      <th mat-header-cell *matHeaderCellDef>Nome do Gênero</th>
+      <td mat-cell *matCellDef="let generos">{{ generos.nomeGenero }}</td>
+    </ng-container>
+
+    <!-- Decimal Gênero -->
+    <ng-container matColumnDef="decimalGenero">
+      <th mat-header-cell *matHeaderCellDef>Decimal Gênero</th>
+      <td mat-cell *matCellDef="let generos">{{ generos.decimalGenero }}</td>
+    </ng-container>
+
+    <!-- Livros Gênero -->
+    <ng-container matColumnDef="livrosGenero">
+      <th mat-header-cell *matHeaderCellDef>Livros Gênero</th>
+      <td mat-cell *matCellDef="let generos">{{ generos.livrosGenero }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="visaoColunas"></tr>
+    <tr mat-row *matRowDef="let row; columns: visaoColunas"></tr>
+  </table>
+</mat-card>
