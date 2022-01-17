@@ -1,6 +1,6 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-feed',
@@ -8,7 +8,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
   styleUrls: ['./feed.component.scss']
 })
 export class FeedComponent {
-  /** Based on the screen size, switch from standard to one column per row */
+  usuario = { userName: 'Luciano Barbosa', icone: 'remember_me' };
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
       if (matches) {
