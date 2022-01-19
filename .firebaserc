@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bookshelf-bcw9-969b0": {
+      "hosting": {
+        "bookshelf_v1_luciano": [
+          "bookshelf-bcw9-969b0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bookshelf-bcw9-969b0"
+  }
+}

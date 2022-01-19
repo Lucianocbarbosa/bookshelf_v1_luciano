@@ -14,9 +14,6 @@ import { NavegacaoService } from './../servicosInterface/navegacao.service';
 export class NavegacaoComponent {
   //Itens co menu principal.
   tituloNav = 'BookShelf v1';
-  usuario = { userName: 'Victor Icoma', icone: 'remember_me' };
-  //Itens da Barra superior.
-  tituloBarra = '[Sua Estante Virtual]';
   //Itens de icones e imagens de navegação.
   iconeGeral = '../../assets/imagens/ShelfBook.png';
   lIcone = 80;

@@ -8,10 +8,7 @@
     [opened]="(isHandset$ | async) === false"
   >
     <mat-toolbar>{{ tituloNav }}</mat-toolbar>
-    <p>
-      <mat-icon aria-label="Usuário">{{ usuario.icone }}</mat-icon>
-      {{ usuario.userName }}
-    </p>
+
     <mat-nav-list *ngFor="let itemMenu of itensMenu$ | async; index as i">
       <a
         mat-list-item
@@ -38,7 +35,10 @@
         [height]="aIcone"
         [src]="iconeGeral"
       />
-      <span>{{ tituloBarra }}</span>
+      <button mat-raised-button color="primary">
+        <mat-icon class="mat-18">login</mat-icon>
+        Login
+      </button>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
