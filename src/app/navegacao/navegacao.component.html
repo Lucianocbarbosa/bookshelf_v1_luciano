@@ -12,7 +12,7 @@
       <mat-icon aria-label="Usuário">{{ usuario.icone }}</mat-icon>
       {{ usuario.userName }}
     </p>
-    <mat-nav-list *ngFor="let itemMenu of itensMenu">
+    <mat-nav-list *ngFor="let itemMenu of itensMenu$ | async; index as i">
       <a
         mat-list-item
         *ngIf="itemMenu.hab === true"
