@@ -1,9 +1,11 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { catchError, Observable, of } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
-import { MenuNavegador } from '../modelosInterface/menu-navegador';
+import { AppLoginComponent } from './../app-login/app-login.component';
+import { MenuNavegador } from './../modelosInterface/menu-navegador';
 import { NavegacaoService } from './../servicosInterface/navegacao.service';
 
 @Component({
@@ -19,7 +21,7 @@ export class NavegacaoComponent {
   lIcone = 80;
   aIcone = 80;
   //Controle das rotas do menu.
-  itensMenu$: Observable<MenuNavegador[]>;
+  itensMenu$: Observable<MenuNavegador[]>
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -27,6 +29,7 @@ export class NavegacaoComponent {
     );
   constructor(
     private breakpointObserver: BreakpointObserver,
+    private telaLogin: MatDialog,
     private navegadorService: NavegacaoService
   ) {
     this.itensMenu$ = navegadorService.listagemMenu()
@@ -35,5 +38,11 @@ export class NavegacaoComponent {
           return of([])
         })
       )
+  }
+
+  abrirLogin(erroMsg: string) {
+    this.telaLogin.open(AppLoginComponent, {
+      data: erroMsg
+    })
   }
 }

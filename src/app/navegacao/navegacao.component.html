@@ -8,7 +8,6 @@
     [opened]="(isHandset$ | async) === false"
   >
     <mat-toolbar>{{ tituloNav }}</mat-toolbar>
-
     <mat-nav-list *ngFor="let itemMenu of itensMenu$ | async; index as i">
       <a
         mat-list-item
@@ -27,7 +26,7 @@
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async"
       >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon aria-label="Menu BookShelf Lateral">menu</mat-icon>
       </button>
       <img
         mat-card-sm-image
@@ -37,7 +36,7 @@
       />
       <button mat-raised-button color="primary">
         <mat-icon class="mat-18">login</mat-icon>
-        Login
+        LOGIN
       </button>
     </mat-toolbar>
     <router-outlet></router-outlet>
