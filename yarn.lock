@@ -1677,6 +1677,20 @@
   resolved "https://registry.yarnpkg.com/@jridgewell/resolve-uri/-/resolve-uri-1.0.0.tgz#3fdf5798f0b49e90155896f6291df186eac06c83"
   integrity sha512-9oLAnygRMi8Q5QkYEU4XWK04B+nuoXoxjRvRxgjuChkLZFBja0YPSgdZ7dZtwhncLBcQe/I/E+fLuk5qxcYVJA==
 
+"@ngneat/hot-toast@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@ngneat/hot-toast/-/hot-toast-4.1.0.tgz#8c0cf5be445254678b782e612f4e8840bf2c8974"
+  integrity sha512-5QgxYXAGNmg0J10QjHOBu8Go5SZ9WIg5TDFm60ecMK/BUcuaHB7QeVfY/YFUPsw1iXaO3IVb81w9LdqXz2GNsg==
+  dependencies:
+    tslib "^2.3.0"
+
+"@ngneat/overview@^3.0.0":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@ngneat/overview/-/overview-3.0.2.tgz#517cd74fc76078dda039e4fe66ee4568b22c8c73"
+  integrity sha512-2CpRlxqThQ2TWDYSHc77aM3MwH6DhrRWUZZMOtoKTVLWBv2f1qjCYrSuCpZQLG1bUvOoqMH9CK4xoIIOzx2eYw==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngtools/webpack@13.1.2":
   version "13.1.2"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-13.1.2.tgz#58d8bfe8b3d4ee3b5aa1ceb3f7911b77410c6c6b"
